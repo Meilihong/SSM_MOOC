@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        onload = function () {
+            var xmlHttpRequest = new XMLHttpRequest();
+            xmlHttpRequest.onreadystatechange = function () {
+                if (xmlHttpRequest.status == 200 && xmlHttpRequest.readyState == 4) {
+                    var responseText = xmlHttpRequest.responseText;
+                    alert(responseText);
+
+                }
+            }
+            xmlHttpRequest.open("post", "/MOOCProject/showAllDocuments");
+            xmlHttpRequest.send();
+        }
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
